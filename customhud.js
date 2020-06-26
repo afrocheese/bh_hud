@@ -3,7 +3,7 @@ var bh, TestRun = !1,
     bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh;
 try
 {
-    console.log(GM_xmlhttpRequest({ method: "GET", url: "http://google.ca/", synchronous: true }).readyState);
+    console.log(GM_xmlhttpRequest({ method: "GET", url:BattleCardDataUrl, synchronous: true }));
 }
 catch (e)
 {
