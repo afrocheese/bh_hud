@@ -10,7 +10,10 @@
 // @include      http://game261051.konggames.com/*
 // @include      http://www.kongregate.com/games/AnotherPlaceProd/*
 // @grant        unsafeWindow
+// @grant        GM_xmlhttpRequest
 // ==/UserScript==
 Object.defineProperty(bh.Player.prototype, "canScout", { get: function () { return true; }, enumerable: true, configurable: true});
 Object.defineProperty(bh.Player.prototype, "isAlly", { get: function () { return true; }, enumerable: true, configurable: true});
 bh.hud.listener.init(unsafeWindow, DataHost, WebHost);
+
+console.log(GM_info);

@@ -1,6 +1,14 @@
 var bh, TestRun = !1,
     ScoutGuildName = !0,
     bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh;
+try
+{
+    console.log(GM_xmlhttpRequest({ method: "GET", url: "http://google.ca/", synchronous: true }).readyState);
+}
+catch (e)
+{
+    console.log(e);
+}
 
 function updateCardData() {
     $.get(BattleCardDataUrl).then(function(e) {
