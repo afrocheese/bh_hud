@@ -4,9 +4,11 @@ var bh, TestRun = !1,
 try
 {
     console.log(GM_xmlhttpRequest({ method: "GET", url:BattleCardDataUrl, synchronous: true }));
+    console.log('got it')
 }
 catch (e)
 {
+    console.log('womp womp')
     console.log(e);
 }
 
