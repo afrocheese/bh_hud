@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<label>Min Damage</label>
+<input type="number" id="minV"></input><br>
+<label>Max Damage</label>
+<input type="number" id="maxV"></input><br>
+<label>Stars</label>
+<input type="number" id="Stars"></input><br>
+<button id="go">go</button><br>
+<label>Result</label>
+<input type="text" id="Result"></input>
+<script>
+const _DAMAGE = [];
+
+{
+  const multipliers = [ 1, 0.8, 0.85, 0.88, 0.9, 1 ];
+  const numUpgrades = [ , 9, 19, 34, 49, 49 ];
+  for ( let i = 0; i <= 5; i++ )
+  {
+    let p = 1;
+    let a = 1;
+    for ( let j = i; j > 0; j-- ){ a += (p *= multipliers[j]); }
+
+    _DAMAGE.push( {
+      "rarity":      i,
+      "numUpgrades": numUpgrades[i],
+      "multiplier":  multipliers[i],
+      "product":     p,
+      "sumProduct":  a
+    } );
+  }
+}
+
+function getDamage( min, max, rarity, evo, lvl ){
+  let m = _DAMAGE[ rarity ],
+      upgradeDamage = ( max - min * m.product ) / m.numUpgrades / m.sumProduct,
+      d = min,
+      l = _DAMAGE[ rarity ].numUpgrades;
+
+  for ( let i = 0; i < Math.min( evo, rarity ); )
+  {
+    d += upgradeDamage * l;
+    d *= _DAMAGE[++i].multiplier;
+  }
+  d+=Math.min( l, (lvl - 1 ))*upgradeDamage;
+
+  return Math.floor( d );
+}
+var min_values='';
+
+//console.log( `Evo ${i}.01: ${getDamage( 20, 2028, 5, i, 1 )} - ${i}.50: ${getDamage( 20, 2028, 5, i, 50 )}` );
+function getminValues(){
+	var minV=parseInt(document.getElementById('minV').value);
+	var maxV=parseInt(document.getElementById('maxV').value);
+	var Stars=parseInt(document.getElementById('Stars').value);
+	for ( let i = 0; i <= Stars; i++ )
+		min_values+=getDamage( minV, maxV, Stars, i, 1 )+',';
+	  
+	document.getElementById('Result').value=min_values.slice(0,min_values.length-1);
+	min_values="";
+}
+var elem = document.getElementById('go');
+  elem.addEventListener('click', getminValues);
+</script><br>
+</html>
