@@ -1,20 +1,10 @@
 var bh, TestRun = !1,
     ScoutGuildName = !0,
     bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh;
-try
-{
-    console.log(GM_xmlhttpRequest({ method: "GET", url:BattleCardDataUrl, synchronous: true }));
-    console.log('got it')
-}
-catch (e)
-{
-    console.log('womp womp')
-    console.log(e);
-}
 
 function updateCardData() {
-    $.get(BattleCardDataUrl).then(function(e) {
-        var t, r = bh.Repo.mapTsv(e).map(function(e) {
+    
+        var t, r = bh.Repo.mapTsv(bh.battleCardTSV).map(function(e) {
                 try {
                     var t = e.Id,
                         r = bh.data.BattleCardRepo.find(t),
@@ -77,7 +67,7 @@ function updateCardData() {
                 return e.join(",")
             }).join("|") + "\t" + e.maxValues.join("|") + "\t" + String(e.tier)[0] + "\t" + e.mats.join(",") + "\t" + e.perkBase + "\t" + e.perks.join(",") + "\t" + e.effects.join(",") + "\t" + String(e.inPacks)[0]
         }), $("#data-output").val(n)
-    })
+    }
 }! function(e) {
     class t {
         constructor() {
