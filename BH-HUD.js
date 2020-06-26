@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name         Battlehand HUD MLV edition 4.3.4
+// @name         Battlehand HUD MLV edition 4.3.5
 // @namespace    Battlehand-HUD
-// @version      4.3.4
+// @version      4.3.5
 // @description  Battlehand Customized HUD
-// @author       Jai (feat. SyntheeR)
-// @require      http://www.ifuwantweb.de/current_hud/datasource.js
-// @require      http://www.ifuwantweb.de/current_hud/customhud.min.js
-// @updateURL    http://www.ifuwantweb.de/current_hud/BH-HUD.js
+// @author       Jai (feat. SyntheeR, afrocheese)
+// @require      https://raw.githubusercontent.com/afrocheese/bh_hud/master/datasource.js
+// @require      https://raw.githubusercontent.com/afrocheese/bh_hud/master/customhud.min.js
+// @updateURL    https://raw.githubusercontent.com/afrocheese/bh_hud/master/BH-HUD.js
 // @include      http://game261051.konggames.com/*
 // @include      http://www.kongregate.com/games/AnotherPlaceProd/*
 // @grant        unsafeWindow
