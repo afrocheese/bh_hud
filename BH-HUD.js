@@ -5,7 +5,7 @@
 // @description  Battlehand Customized HUD
 // @author       Jai (feat. SyntheeR, afrocheese)
 // @require      https://raw.githubusercontent.com/afrocheese/bh_hud/master/datasource.js
-// @require      https://raw.githubusercontent.com/afrocheese/bh_hud/master/customhud.min.js
+// @require      https://raw.githubusercontent.com/afrocheese/bh_hud/master/customhud.js
 // @updateURL    https://raw.githubusercontent.com/afrocheese/bh_hud/master/BH-HUD.js
 // @include      http://game261051.konggames.com/*
 // @include      http://www.kongregate.com/games/AnotherPlaceProd/*
