@@ -3997,7 +3997,7 @@ function(e) {
         }
 
         function s() {
-            a = new e.Messenger(window, d, window.open("http://bh.elvenintrigue.com/cards.html?hud,complete", "bh-hud-library", "", !0))
+            a = new e.Messenger(window, d, window.open("http://bh.halfmugtavern.blog/cards.html?hud,complete", "bh-hud-library", "", !0))
         }
 
         function u(t, r) {
