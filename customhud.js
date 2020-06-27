@@ -3,8 +3,8 @@ var bh, TestRun = !1,
     bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh, bh;
 
 function updateCardData() {
-    
-        var t, r = bh.Repo.mapTsv(bh.battleCardTSV).map(function(e) {
+    $.get(BattleCardDataUrl).then(function(e) {
+        var t, r = bh.Repo.mapTsv(e).map(function(e) {
                 try {
                     var t = e.Id,
                         r = bh.data.BattleCardRepo.find(t),
@@ -67,7 +67,7 @@ function updateCardData() {
                 return e.join(",")
             }).join("|") + "\t" + e.maxValues.join("|") + "\t" + String(e.tier)[0] + "\t" + e.mats.join(",") + "\t" + e.perkBase + "\t" + e.perks.join(",") + "\t" + e.effects.join(",") + "\t" + String(e.inPacks)[0]
         }), $("#data-output").val(n)
-    }
+    })
 }! function(e) {
     class t {
         constructor() {
@@ -3760,7 +3760,7 @@ function(e) {
             function h() {
                 var t = e.$("#brain-hud-scouter-guild-target").val(),
                     r = e.data.guilds.findByGuid(t);
-                p(e.$('#brain-hud-scouter-guild-target > option[value="' + t + '"]')[0]), ScoutGuildName && "The βrain" == e.Player.me.guildParent ? e.$("#brain-hud-scouter-guild-report").val(e.data.reports.getReport(t)[t] + "\n" + r.name || "") : e.$("#brain-hud-scouter-guild-report").val(e.data.reports.getReport(t)[t] || "")
+                p(e.$('#brain-hud-scouter-guild-target > option[value="' + t + '"]')[0]), ScoutGuildName && "The Î²rain" == e.Player.me.guildParent ? e.$("#brain-hud-scouter-guild-report").val(e.data.reports.getReport(t)[t] + "\n" + r.name || "") : e.$("#brain-hud-scouter-guild-report").val(e.data.reports.getReport(t)[t] || "")
             }
 
             function f(t, r) {
@@ -3997,7 +3997,7 @@ function(e) {
         }
 
         function s() {
-            a = new e.Messenger(window, d, window.open("http://http://bh.halfmugtavern.blog/cards.html?hud,complete", "bh-hud-library", "", !0))
+            a = new e.Messenger(window, d, window.open("http://bh.elvenintrigue.com/cards.html?hud,complete", "bh-hud-library", "", !0))
         }
 
         function u(t, r) {
