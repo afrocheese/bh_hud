@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Battlehand HUD MLV edition 4.3.5
+// @name         Battlehand HUD MLV edition 4.3.6
 // @namespace    Battlehand-HUD
-// @version      4.3.5
+// @version      4.3.6
 // @description  Battlehand Customized HUD
 // @author       Jai (feat. SyntheeR, afrocheese)
 // @require      https://raw.githubusercontent.com/afrocheese/bh_hud/master/datasource.js

@@ -5,6 +5,9 @@ Follow the instructions from the [Setup] tab http://bh.halfmugtavern.blog/ but u
 On initial load, you will be prompted a few times that "A userscript wants to access a cross-origin resource". You need to allow these requests.
 
 ## Release Notes
+### 4.8.6
+ - Populates guild name in guild text view / scouting view
+
 ### 4.8.5
  - Fixed the link to the card library
  - Removed the CORS error when loading data from google sheets

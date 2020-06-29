@@ -2784,7 +2784,12 @@ function(e) {
                     o = r.fameLevel + 1,
                     s = t.HeroRepo.sorted.map(a ? d : l),
                     u;
-                return [n ? n + 1 : "GL", o, r.name, i].concat(s).join("\t");
+
+                var guild_guid = (a && a._pp) ? a._pp.playerGuild : undefined;
+                var guild = t.guilds.findByGuid(guild_guid);
+                var guild_name = guild ? ",\"" + guild.name + "\"" : "";
+
+                return [n ? n + 1 : "GL" + guild_name, o, r.name, i].concat(s).join("\t");
 
                 function l(e) {
                     var t = r.archetypeLevels[e.guid] + 1,
