@@ -6,7 +6,7 @@
 // @author       Jai (feat. SyntheeR, afrocheese)
 // @require      https://raw.githubusercontent.com/afrocheese/bh_hud/master/datasource.js
 // @require      https://raw.githubusercontent.com/afrocheese/bh_hud/master/customhud.js
-// @require      https://code.jquery.com/jquery-3.2.1.min.js
+// @require      https://raw.githubusercontent.com/afrocheese/bh_hud/master/defaults.js
 // @updateURL    https://raw.githubusercontent.com/afrocheese/bh_hud/master/BH-HUD.js
 // @include      http://game261051.konggames.com/*
 // @include      http://www.kongregate.com/games/AnotherPlaceProd/*
@@ -17,7 +17,6 @@ Object.defineProperty(bh.Player.prototype, "canScout", { get: function () { retu
 Object.defineProperty(bh.Player.prototype, "isAlly", { get: function () { return true; }, enumerable: true, configurable: true});
 
 var gids = [GuildsGID, BattleCardRepoGID, BoosterCardRepoGID, DungeonRepoGID, EffectRepoGID, HeroRepoGID, ItemRepoGID, WildCardRepoGID, 0]
-bh.TSV = {};
 
 !function stageTSV() {
     gids.forEach(function(gid) {
@@ -30,10 +29,11 @@ bh.TSV = {};
                 bh.TSV[String(gid)] = r.responseText;
                 if (Object.keys(bh.TSV).length == gids.length) {
                     console.log('have all data');
-                    bh.hud.listener.init(unsafeWindow, DataHost, WebHost);
                 }
             },
             synchronous: true
         });
     });
 }()
+
+bh.hud.listener.init(unsafeWindow, DataHost, WebHost);
