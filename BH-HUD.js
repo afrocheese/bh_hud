@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Battlehand HUD
+// @name         Battlehand HUD MLV edition 4.3.7
 // @namespace    Battlehand-HUD
 // @version      4.3.7
 // @description  Battlehand Customized HUD
